@@ -1,0 +1,143 @@
+{
+	"name":"get_vehicles",
+	"description":"Searches for cars",
+	"sourceFabric":{
+		"config":{
+			"body":{
+				
+			},
+			"headers":{
+				
+			},
+			"method":"GET",
+			"parameters":{
+				"properties":{
+					"condition.odometer.value_in_km":{
+						"type":"string",
+						"description":"Filter results by odometer value range, in format 'min-max', 'min-' or '-max' i.e. 10-100 means from 10 to 100, 10- means 10 and more, -100 means less than 100. Never write just the number. If you want to write an exact number, put it as a range X-X."
+					},
+					"advertiser.id":{
+						"type":"string",
+						"description":"Filter by advertiser ID. Can be repeated for multiple values. Case-sensitive."
+					},
+					"_fieldset":{
+						"type":"string",
+						"description":"The set of vehicle fields to return in the results.",
+						"enum":[
+							"searchresults"
+						]
+					},
+					"_limit":{
+						"type":"integer",
+						"description":"The maximum number of vehicles to return, default 25, max 100."
+					},
+					"general.model.normalized":{
+						"type":"string",
+						"description":"Filter results by vehicle model. Can be repeated for multiple values. Must be lower-case and presented as make/model (i.e. toyota/yaris)."
+					},
+					"features.climate_control":{
+						"type":"string",
+						"description":"Filter for vehicles with climate control. Pass 'true' to apply filter.",
+						"enum":[
+							"true"
+						]
+					},
+					"body.door_count":{
+						"type":"string",
+						"description":"Filter by door count range, in format 'min-max', 'min-' or '-max'i.e. 10-100 means from 10 to 100, 10- means 10 and more, -100 means less than 100. Never write just the number. If you want to write an exact number, put it as a range X-X."
+					},
+					"powertrain.engine.energy.type.category":{
+						"type":"string",
+						"description":"Filter results by engine energy type. Can be repeated for multiple values. Must be lower case."
+					},
+					"_loglabel.yourkey":{
+						"type":"string",
+						"description":"Arbitrary key-value pairs to attach to the request log."
+					},
+					"sales_conditions.pricing.asking.consumer.amount":{
+						"type":"string",
+						"description":"Filter results by price range, in format 'min-max', 'min-' or '-max' i.e. 10-100 means from 10 to 100, 10- means 10 and more, -100 means less than 100. Never write just the number. If you want to write an exact number, put it as a range X-X."
+					},
+					"powertrain.transmission.type":{
+						"type":"string",
+						"description":"Filter by transmission type. Can be repeated for multiple values. Must be lower case.",
+						"enum":[
+							"manual",
+							"automatic"
+						]
+					},
+					"body.colour.primary":{
+						"type":"string",
+						"description":"Filter by primary body color. Can be repeated for multiple values. Must be lower case."
+					},
+					"general.bodystyle.category":{
+						"type":"string",
+						"description":"Filter results by vehicle body style. Can be repeated for multiple values. Must be lower case. Examples: hatchback."
+					},
+					"region_specific.nl.nap_weblabel":{
+						"type":"string",
+						"description":"Filter for vehicles with NAP web label. Pass 'true' to apply filter.",
+						"enum":[
+							"true"
+						]
+					},
+					"advertiser.coordinates":{
+						"type":"integer",
+						"description":"Filter for vehicles within X km of the visitor location. Requires _location parameter."
+					},
+					"general.year":{
+						"type":"string",
+						"description":"Filter by model year range, in format 'min-max', 'min-' or '-max'."
+					},
+					"features.air_conditioning":{
+						"type":"string",
+						"description":"Filter for vehicles with air conditioning. Pass 'true' to apply filter.",
+						"enum":[
+							"true"
+						]
+					},
+					"general.make.normalized":{
+						"type":"string",
+						"description":"Filter results by vehicle make. Can be repeated for multiple values. Must be lower-case."
+					},
+					"features.cruise_control":{
+						"type":"string",
+						"description":"Filter for vehicles with cruise control. Pass 'true' to apply filter.",
+						"enum":[
+							"true"
+						]
+					},
+					"general.type.name":{
+						"type":"string",
+						"description":"Free text search on type name. Case-insensitive."
+					},
+					"features.tow_bar":{
+						"type":"string",
+						"description":"Filter for vehicles with a tow bar. Pass 'true' to apply filter.",
+						"enum":[
+							"true"
+						]
+					},
+					"keyword":{
+						"type":"string",
+						"description":"Free text keyword search. Case-insensitive and locale-dependent."
+					},
+					"interior.seat_count":{
+						"type":"string",
+						"description":"Filter by seat count range, in format 'min-max', 'min-' or '-max'. i.e. 2-4 means from 2 to 4, 4- means 4 and more, -4 means less than 4. Never write just the number. If you want to write an exact number, put it as a range X-X."
+					},
+					"sales_conditions.margin_scheme":{
+						"type":"string",
+						"description":"Filter by margin scheme. Can be repeated for multiple values. Case-sensitive."
+					}
+				},
+				"required":[
+					"_fieldset"
+				],
+				"type":"object"
+			},
+			"url":"https://api-nl.ilsa.cloud/5k8dwFCpU7Ak/searchresults"
+		},
+		"name":"apiFunction"
+	}
+}

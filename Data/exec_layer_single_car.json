@@ -1,0 +1,36 @@
+{
+	"name":"single_vehicle",
+	"description":"Searches for details of an exact car.",
+	"sourceFabric":{
+		"config":{
+			"body":{
+				
+			},
+			"headers":{
+				
+			},
+			"method":"GET",
+			"parameters":{
+				"properties":{
+					"_fieldset":{
+						"type":"string",
+						"description":"The set of vehicle fields to return in the results.",
+						"enum":[
+							"details"
+						]
+					},
+					"id":{
+						"type":"string",
+						"description":"Car ID"
+					}
+				},
+				"required":[
+					"_fieldset", "id"
+				],
+				"type":"object"
+			},
+			"url":"https://api-nl.ilsa.cloud/5k8dwFCpU7Ak/vehicle"
+		},
+		"name":"apiFunction"
+	}
+}
